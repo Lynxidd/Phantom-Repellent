@@ -1,0 +1,14 @@
+name: Phantom-Repellent
+version: '0.0.1-DEV-SNAPSHOT'
+main: me.lynxid.phantomRepellent.PhantomRepellent
+api-version: '1.21'
+prefix: Phantoms
+load: STARTUP
+authors: [ Lynxid ]
+description: A plugin for toggling phantoms on a minecraft server
+website: lynxidd.github.io/Lynx/
+commands:
+  phantoms:
+    description: Toggles the phantoms on or off
+    permissions: phantoms.command
+    usage: /<command> [get|on|off]
