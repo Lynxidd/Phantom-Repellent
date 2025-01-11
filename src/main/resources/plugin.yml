@@ -10,5 +10,12 @@ website: lynxidd.github.io/Lynx/
 commands:
   phantoms:
     description: Toggles the phantoms on or off
-    permissions: phantoms.command
+    permissions: phantoms.member
     usage: /<command> [get|on|off]
+permissions:
+ phantoms.command:
+  description: Allows users to toggle the status of their phantoms, as well as allowing users to get their current state.
+  default: true
+ phantoms.admin:
+  description: Allows users to toggle the status of other peoples phantoms, as well as allowing users to get others current state.
+  default: op

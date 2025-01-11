@@ -25,6 +25,8 @@ public class JoinListener implements Listener {
 
         if (!p.hasPlayedBefore()) {
             pdc.set(phantomKey, PersistentDataType.BOOLEAN, false);
+        } else if (pdc.has(phantomKey, PersistentDataType.BOOLEAN)) {
+            plugin.resetPlayer(p);
         }
     }
 }
