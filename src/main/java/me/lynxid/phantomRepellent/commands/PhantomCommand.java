@@ -1,6 +1,7 @@
 package me.lynxid.phantomRepellent.commands;
 
 import me.lynxid.phantomRepellent.PhantomRepellent;
+
 import org.bukkit.ChatColor;
 import org.bukkit.NamespacedKey;
 import org.bukkit.command.Command;
@@ -23,7 +24,7 @@ public class PhantomCommand implements CommandExecutor {
         this.plugin = plugin;
     }
 
-
+    @SuppressWarnings("deprecation")
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, String[] strings) {
 
@@ -49,9 +50,9 @@ public class PhantomCommand implements CommandExecutor {
                     PersistentDataContainer pdc = target.getPersistentDataContainer();
                     NamespacedKey phantomKey = new NamespacedKey(this.plugin, "phantom");
                     Boolean phantoms = pdc.get(phantomKey, PersistentDataType.BOOLEAN);
-                    if (Boolean.FALSE.equals(phantoms)) {
+                    if (Boolean.FALSE.equals(phantoms) || phantoms == null ) {
                         p.sendMessage(ChatColor.BLUE + "Phantoms are turned" + ChatColor.RED + " " + ChatColor.BOLD + "on " + ChatColor.BLUE + "for" + ChatColor.WHITE + " " + ChatColor.BOLD + targetN);
-                    } else if (Boolean.TRUE.equals(phantoms)) {
+                    } else if (phantoms) {
                         p.sendMessage(ChatColor.BLUE + "Phantoms are turned" + ChatColor.GREEN + " " + ChatColor.BOLD + "off " + ChatColor.BLUE + "for" + ChatColor.WHITE + " " + ChatColor.BOLD + targetN);
                     }
                 } else {

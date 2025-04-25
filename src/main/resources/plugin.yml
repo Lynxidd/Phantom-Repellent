@@ -1,5 +1,5 @@
 name: Phantom-Repellent
-version: '0.0.1-DEV-SNAPSHOT'
+version: '1.0.1-Paper_Release'
 main: me.lynxid.phantomRepellent.PhantomRepellent
 api-version: '1.21'
 prefix: Phantoms

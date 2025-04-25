@@ -23,7 +23,15 @@ public class JoinListener implements Listener {
         PersistentDataContainer pdc = p.getPersistentDataContainer();
         NamespacedKey phantomKey = new NamespacedKey(this.plugin, "phantom");
 
-        if (!p.hasPlayedBefore()) {
+        Boolean phantoms = null;
+
+        try {
+            phantoms = pdc.get(phantomKey, PersistentDataType.BOOLEAN);
+        } catch (Exception i) {
+            //stfu
+        }
+
+        if (!p.hasPlayedBefore() || phantoms == null) {
             pdc.set(phantomKey, PersistentDataType.BOOLEAN, false);
         } else if (pdc.has(phantomKey, PersistentDataType.BOOLEAN)) {
             plugin.resetPlayer(p);

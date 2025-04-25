@@ -1,6 +1,7 @@
 package me.lynxid.phantomRepellent;
 
 import me.lynxid.phantomRepellent.commands.PhantomCommand;
+import me.lynxid.phantomRepellent.commands.PhantomTabCompleter;
 import me.lynxid.phantomRepellent.listeners.JoinListener;
 import me.lynxid.phantomRepellent.listeners.PhantomListener;
 import org.bukkit.Bukkit;
@@ -13,7 +14,6 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitScheduler;
-
 import java.util.Objects;
 
 public final class PhantomRepellent extends JavaPlugin implements Listener {
@@ -28,6 +28,7 @@ public final class PhantomRepellent extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new JoinListener(this), this);
         getServer().getPluginManager().registerEvents(new PhantomListener(this), this);
         Objects.requireNonNull(getCommand("phantoms")).setExecutor(new PhantomCommand(this));
+        Objects.requireNonNull(getCommand("phantoms")).setTabCompleter(new PhantomTabCompleter());
 
         getLogger().info("Phantom repellent has started!");
 
@@ -39,14 +40,11 @@ public final class PhantomRepellent extends JavaPlugin implements Listener {
 
                 if (night) {
                     resetStatistics(world);
-                    getLogger().info("Statistics reset complete for " + world.getName());
                 }
             }
         }, 0L, 6000);
 
     }
-
-
 
     private void resetStatistics(World world) {
         for (final Player player : world.getPlayers()) {
@@ -63,6 +61,7 @@ public final class PhantomRepellent extends JavaPlugin implements Listener {
         player.setStatistic(Statistic.TIME_SINCE_REST, 0);
         getLogger().info("Reset statistics for " + player.getName());
     }
+
     @Override
     public void onDisable() {
         getLogger().info("Phantom repellent has stopped!");

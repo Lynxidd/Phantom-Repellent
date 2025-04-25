@@ -6,10 +6,10 @@
 
     <groupId>me.lynxid</groupId>
     <artifactId>phantom-repellent</artifactId>
-    <version>0.0.1-DEV-SNAPSHOT</version>
+    <version>1.0.1-Paper_Release</version>
     <packaging>jar</packaging>
 
-    <name>phantom-repellant</name>
+    <name>phantom-repellent</name>
 
     <properties>
         <java.version>21</java.version>
