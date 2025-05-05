@@ -10,6 +10,8 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
+import java.util.Objects;
+
 public class JoinListener implements Listener {
 
     private final PhantomRepellent plugin;
@@ -22,6 +24,7 @@ public class JoinListener implements Listener {
         Player p = e.getPlayer();
         PersistentDataContainer pdc = p.getPersistentDataContainer();
         NamespacedKey phantomKey = new NamespacedKey(this.plugin, "phantom");
+        boolean phantomsOff = Objects.equals(pdc.get(phantomKey, PersistentDataType.BOOLEAN), true);
 
         Boolean phantoms = null;
 
@@ -33,7 +36,7 @@ public class JoinListener implements Listener {
 
         if (!p.hasPlayedBefore() || phantoms == null) {
             pdc.set(phantomKey, PersistentDataType.BOOLEAN, false);
-        } else if (pdc.has(phantomKey, PersistentDataType.BOOLEAN)) {
+        } else if (phantomsOff) {
             plugin.resetPlayer(p);
         }
     }

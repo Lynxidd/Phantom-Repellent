@@ -11,6 +11,8 @@ import org.bukkit.event.entity.EntityTargetEvent;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
+import java.util.Objects;
+
 public class PhantomListener implements Listener {
 
     private final PhantomRepellent plugin;
@@ -23,6 +25,7 @@ public class PhantomListener implements Listener {
         NamespacedKey phantomKey = new NamespacedKey(this.plugin, "phantom");
         assert target != null;
         PersistentDataContainer pdc = target.getPersistentDataContainer();
-        e.setCancelled(target instanceof Player && pdc.has(phantomKey, PersistentDataType.BOOLEAN));
+        boolean phantomsOff = Objects.equals(pdc.get(phantomKey, PersistentDataType.BOOLEAN), true);
+        e.setCancelled(target instanceof Player && phantomsOff);
     }
 }

@@ -50,8 +50,9 @@ public final class PhantomRepellent extends JavaPlugin implements Listener {
         for (final Player player : world.getPlayers()) {
             NamespacedKey phantomKey = new NamespacedKey(this, "phantom");
             PersistentDataContainer pdc = player.getPersistentDataContainer();
+            boolean phantomsOff = Objects.equals(pdc.get(phantomKey, PersistentDataType.BOOLEAN), true);
 
-            if (pdc.has(phantomKey, PersistentDataType.BOOLEAN)) {
+            if (phantomsOff) {
                 resetPlayer(player);
             }
         }

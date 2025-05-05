@@ -6,7 +6,7 @@
 
     <groupId>me.lynxid</groupId>
     <artifactId>phantom-repellent</artifactId>
-    <version>1.0.1-Paper_Release</version>
+    <version>1.0.2-Paper_Release</version>
     <packaging>jar</packaging>
 
     <name>phantom-repellent</name>
