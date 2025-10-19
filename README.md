@@ -1,5 +1,8 @@
 # Phantom Repellent
 Phantom Repellent is a minecraft plugin that allows players to take control of phantom spawning.
+## Links
+This plugin is avaliable to download on [Modrinth](https://modrinth.com/plugin/phantom-repellent) and [Hanger](https://hangar.papermc.io/Lynxid/Phantom-Repellent)
+We also have a [discord](https://discord.gg/w5m9bzqS2Z) you can use to keep you up to date with my latest projects, you can also ask for help there!
 ## Commands:
 - ``` /phantoms``` _returns the available functions_ 
 - ``` /phantoms get``` _gives the sender their current state_
