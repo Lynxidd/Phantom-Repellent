@@ -17,7 +17,6 @@ import java.util.Objects;
 
 public class PhantomListener implements Listener {
 
-    private static final Logger log = LoggerFactory.getLogger(PhantomListener.class);
     private final PhantomRepellent plugin;
     public PhantomListener(PhantomRepellent plugin)  {this.plugin = plugin;}
 
