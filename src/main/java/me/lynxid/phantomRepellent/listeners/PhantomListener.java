@@ -10,8 +10,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityTargetEvent;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
 
