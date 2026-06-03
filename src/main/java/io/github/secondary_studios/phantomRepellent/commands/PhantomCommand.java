@@ -1,6 +1,6 @@
-package me.lynxid.phantomRepellent.commands;
+package io.github.secondary_studios.phantomRepellent.commands;
 
-import me.lynxid.phantomRepellent.PhantomRepellent;
+import io.github.secondary_studios.phantomRepellent.PhantomRepellent;
 
 import org.bukkit.ChatColor;
 import org.bukkit.NamespacedKey;

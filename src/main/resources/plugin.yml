@@ -1,12 +1,12 @@
 name: Phantom-Repellent
-version: '1.0.3-Paper_Release'
-main: me.lynxid.phantomRepellent.PhantomRepellent
-api-version: '1.21'
+version: '1.0.4-Paper_Release'
+main: io.github.secondary_studios.phantomRepellent.PhantomRepellent
+api-version: '26.1.2'
 prefix: Phantoms
 load: STARTUP
-authors: [ Lynxid ]
-description: A plugin for toggling phantoms on a minecraft server
-website: lynxidd.github.io/Lynx/
+authors: [Secondary Studios, Lynx]
+description: Phantom Repellent is a minecraft plugin that allows players to take control of phantom spawning.
+website: https://github.com/Secondary-Studios/
 commands:
   phantoms:
     description: Toggles the phantoms on or off

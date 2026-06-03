@@ -1,4 +1,4 @@
-package me.lynxid.phantomRepellent.commands;
+package io.github.secondary_studios.phantomRepellent.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -7,6 +7,7 @@ import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 public class PhantomTabCompleter implements TabCompleter {
 
     @Override
-    public @Nullable List<String> onTabComplete(@NotNull CommandSender Sender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
+    public @Nullable List<String> onTabComplete(@NotNull CommandSender Sender, @NotNull Command command, @NotNull String s, @NotNull String @NonNull [] strings) {
 
         if (command.getName().equalsIgnoreCase("phantoms") && strings.length <= 1) {
             List<String> list = new ArrayList<>();

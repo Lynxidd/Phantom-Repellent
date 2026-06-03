@@ -1,6 +1,6 @@
-package me.lynxid.phantomRepellent.listeners;
+package io.github.secondary_studios.phantomRepellent.listeners;
 
-import me.lynxid.phantomRepellent.PhantomRepellent;
+import io.github.secondary_studios.phantomRepellent.PhantomRepellent;
 
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
@@ -34,8 +34,12 @@ public class JoinListener implements Listener {
             //stfu
         }
 
-        if (!p.hasPlayedBefore() || phantoms == null) {
+        if (!p.hasPlayedBefore()) {
             pdc.set(phantomKey, PersistentDataType.BOOLEAN, false);
+            plugin.getLogger().info("New player joined! Setting Phantoms to 'On' for " + p.getName());
+        } else if (phantoms == null) {
+            pdc.set(phantomKey, PersistentDataType.BOOLEAN, false);
+            plugin.getLogger().info("This player doesn't have a Phantoms preference set!! Setting Phantoms to 'On' for " + p.getName());
         } else if (phantomsOff) {
             plugin.resetPlayer(p);
         }
