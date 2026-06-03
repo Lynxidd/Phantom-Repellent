@@ -1,9 +1,9 @@
-package me.lynxid.phantomRepellent;
+package io.github.secondary_studios.phantomRepellent;
 
-import me.lynxid.phantomRepellent.commands.PhantomCommand;
-import me.lynxid.phantomRepellent.commands.PhantomTabCompleter;
-import me.lynxid.phantomRepellent.listeners.JoinListener;
-import me.lynxid.phantomRepellent.listeners.PhantomListener;
+import io.github.secondary_studios.phantomRepellent.commands.PhantomCommand;
+import io.github.secondary_studios.phantomRepellent.commands.PhantomTabCompleter;
+import io.github.secondary_studios.phantomRepellent.listeners.JoinListener;
+import io.github.secondary_studios.phantomRepellent.listeners.PhantomListener;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Statistic;

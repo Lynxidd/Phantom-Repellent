@@ -1,6 +1,6 @@
-package me.lynxid.phantomRepellent.listeners;
+package io.github.secondary_studios.phantomRepellent.listeners;
 
-import me.lynxid.phantomRepellent.PhantomRepellent;
+import io.github.secondary_studios.phantomRepellent.PhantomRepellent;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
